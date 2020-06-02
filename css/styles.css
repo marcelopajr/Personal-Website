@@ -1,0 +1,262 @@
+/* soft reset do css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url('../img/bg.png');
+  background-size: auto 100vh repeat;
+  font-family: 'Roboto', sans-serif;
+  color: whitesmoke;
+  height: 100vh;
+  font-size: 12px;
+}
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: whitesmoke;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+ list-style: none; 
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+}
+
+.menu a:active, .menu a:hover {
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 25px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.titulo {
+  opacity: 0;
+  animation: ease-in-out 1.5s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.site-subtitle, 
+.site-title {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 4em;
+  font-family: 'Poiret One', cursive;
+}
+
+.site-subtitle {
+ font-style: italic;
+ font-family: 'Montserrat Alternates', sans-serif;
+ line-height: 1.8em;
+}
+
+.sobre, .portfolio {
+  padding: 4em;
+  min-height: 100vh;
+}
+
+.contato {
+  padding: 4em;
+  min-height: 50vh;
+}
+
+@media (min-width: 1200px) {
+  .container{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sobre h2, .contato h2, .portfolio h2 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: whitesmoke;
+  margin-bottom: 1.5em;
+  font-size: 2em;
+  padding: 20px;
+}
+
+.sobre p {
+  font-family: 'Roboto', sans-serif;
+  color: whitesmoke;
+  text-indent: 2em;
+  text-align: justify;
+  margin-bottom: 1.5em;
+}
+
+.sobre .avatar {
+  float: right;
+  margin-left: 2em;
+}
+
+.sobre .avatar img {
+  height: 370px;
+  border-radius: 50%;
+}
+
+@media (max-width: 1000px) {
+  .sobre .avatar {
+    float: none;
+    margin-left: 0em;
+    margin-bottom: 2em;
+  }
+  .sobre .avatar img {
+    height: 200px;
+    border-radius: 50%;
+  }
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 3em;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
+    justify-content: center;
+    /*height: calc(100vh - 8em - 48px);*/
+  }
+}
+
+.flip-card {
+  height: 180px;
+  perspective: 1000px;
+}
+
+.flip-card:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 2.5s;
+}
+
+.card-front, 
+.card-back {
+  backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, .7);
+  height: 180px;
+  width: 100%;
+  transform: rotateY(180deg);
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 500ms;
+}
+
+.sobre, .portfolio, .contato {
+  text-align: center;
+}
+
+figcaption {
+  color: whitesmoke;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 5em;
+}
+
+.contato a:active, .contato a:hover {
+  text-decoration: none;
+  transition: 400ms;
+  color: #5b5961;
+}
