@@ -5,15 +5,22 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main-bg-color: whitesmoke;
+  --main-txt-color: #212529;
+  --main-hover-color: #3a86ff;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  background-color: var(--main-bg-color);
   background-image: url('../img/bg.png');
   background-size: auto 100vh repeat;
   font-family: 'Roboto', sans-serif;
-  color: whitesmoke;
+  color: var(--main-txt-color);
   height: 100vh;
   font-size: 12px;
 }
@@ -47,7 +54,7 @@ header {
 }
 
 .menu {
-  background-color: whitesmoke;
+  background-color: var(--main-bg-color);
   position: fixed;
   width: 100vw;
   top: 0;
@@ -65,19 +72,22 @@ header {
 
 .menu a {
   display: block;
+  color: var(--main-txt-color);
   padding: 10px 20px;
+  border-bottom: 5px solid var(--main-bg-color);
 }
 
 .menu a:active, .menu a:hover {
-  background-color: black;
-  color: whitesmoke;
-  border-radius: 25px;
-  transition: 0.3s;
+  background-color: transparent;
+  color: var(--main-txt-color);
   text-decoration: none;
+  border-bottom: 5px solid var(--main-hover-color);
+  border-radius: 2px;
+  transition: 0.3s ease-in;
 }
 
 a {
-  color: black;
+  color: var(--main-hover-color);
   text-decoration: none;
 }
 
@@ -103,7 +113,7 @@ a:hover {
 
 .site-subtitle, 
 .site-title {
-  color: whitesmoke;
+  color: var(--main-txt-color);
   text-align: center;
 }
 
@@ -138,7 +148,7 @@ a:hover {
 
 .sobre h2, .contato h2, .portfolio h2 {
   font-family: 'Montserrat Alternates', sans-serif;
-  color: whitesmoke;
+  color: var(--main-txt-color);
   margin-bottom: 1.5em;
   font-size: 2em;
   padding: 20px;
@@ -146,7 +156,7 @@ a:hover {
 
 .sobre p {
   font-family: 'Roboto', sans-serif;
-  color: whitesmoke;
+  color: var(--main-txt-color);
   text-indent: 2em;
   text-align: justify;
   margin-bottom: 1.5em;
@@ -249,16 +259,16 @@ a:hover {
 }
 
 figcaption {
-  color: whitesmoke;
+  color: var(--main-txt-color);
 }
 
 .contato a {
-  color: whitesmoke;
+  color: var(--main-txt-color);
   font-size: 5em;
 }
 
 .contato a:active, .contato a:hover {
+  color: var(--main-hover-color);
   text-decoration: none;
-  transition: 400ms;
-  color: #5b5961;
+  transition: 500ms;
 }
