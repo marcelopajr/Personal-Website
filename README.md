@@ -1,3 +1,25 @@
-(pt-br) Esse website foi constru韉o por Marcelo Pereira durante a Imers鉶 CSS da Alura (https://www.alura.com.br/imersao-css).
+<h1 align="center">
+    <img alt="Portf贸lio Marcelo" title="Portf贸lio Marcelo" src=".github/portfolio.svg" width="220px" />
+</h1>
 
-(en) This website was built by Marcelo Pereira during Alura's Imers鉶 CSS (https://www.alura.com.br/imersao-css).
+<p align="center">
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a>
+</p>
+
+<p align="center">
+  <img alt="Portf贸lio Marcelo" src=".github/portfolio.gif" width="100%">
+</p>
+
+## 馃捇 Projeto
+
+脡 um portf贸lio pessoal contendo alguns dos meus principais projetos.
+
+> Constru铆do durante a Imers茫o CSS da [Alura](https://www.alura.com.br/)
+
+## 馃敡 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- [HTML](https://www.w3schools.com/html/)
+- [CSS](https://www.w3schools.com/css/)
